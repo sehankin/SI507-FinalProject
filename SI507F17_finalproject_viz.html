@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SI507 Final Project Data Viz</title>
+</head>
+<body>
+	<h1>Data on <em>Entertainment Weekly</em>'s <em>Last Jedi</em> Articles</h1>
+	
+	<p>
+	Welcome!  As we get closer to the release of <em>Star Wars: The Last Jedi</em>,
+	<em>Entertainment Weekly</em> has been running
+	<a href='http://ew.com/star-wars/'>a series of preview articles</a> about it.
+	I wrote a Python program to see how much each of the major characters
+	in the movie had written about them, the results of which are displayed below.
+	I investigated only textual articles, not photo galleries.
+	</p>
+	<p>
+	Each character has a row in the table below.  The "Articles About" column counts
+	how many <em>Entertainment Weekly</em> articles are "about" each character
+	(which I've defined as "the character is mentioned in the title").
+	The "Articles that Mention" column counts how many articles "mention" each character
+	(which I've defined as "the character is mentioned in the body of the article,
+	but not in the title").  The table is sorted in descending order of how many
+	articles each character has about them.
+	<p>
+	I've also included an "Image" column in case you're not sure who a character is.
+	(All images are taken from the character's page on
+	<a href='http://starwars.wikia.com/wiki/Main_Page'>Wookieepedia</a>, except
+	for the caretakers' image, which comes from <a href="http://za.ign.com/star-wars-1/109766/gallery/star-wars-the-last-jedi-latest-details?p=1">
+	this IGN page</a>.)  Additionally, each name in the "Character" column links
+	to the character's Wookieepedia page, but beware of <em>Last Jedi</em> spoilers
+	there!
+	</p>
+	<p>
+	I can't say I'm pleased that the porgs have the most articles about them.
+	</p>
+	
+	<table border='1'>
+		<tr id='header_row'>
+			<th>Character</th>
+			<th>Image</th>
+			<th>Articles About</th>
+			<th>Articles that Mention</th>
+		</tr>
+		<tr id='porgs_row'>
+			<td><a href='http://starwars.wikia.com/wiki/Porg'>porgs</a></td>
+			<td><img src='https://vignette.wikia.nocookie.net/starwars/images/2/2e/Porg.png/revision/latest?cb=20170721231437' alt='porgs' height='300' width='225'></td>
+			<td>6</td>
+			<td>10</td>
+		</tr>
+		<tr id='luke_row'>
+			<td><a href='http://starwars.wikia.com/wiki/Luke_Skywalker'>Luke</a></td>
+			<td><img src='https://vignette.wikia.nocookie.net/starwars/images/2/20/LukeTLJ.jpg/revision/latest?cb=20170927034529' alt='Luke' height='300' width='225'></td>
+			<td>4</td>
+			<td>31</td>
+		</tr>
+		<tr id='bb-8_row'>
+			<td><a href='http://starwars.wikia.com/wiki/BB-8'>BB-8</a></td>
+			<td><img src='https://vignette.wikia.nocookie.net/starwars/images/6/68/BB8-Fathead.png/revision/latest?cb=20161108050455' alt='BB-8' height='300' width='225'></td>
+			<td>4</td>
+			<td>4</td>
+		</tr>
+		<tr id='kylo_row'>
+			<td><a href='http://starwars.wikia.com/wiki/Kylo_Ren'>Kylo</a></td>
+			<td><img src='https://vignette.wikia.nocookie.net/starwars/images/6/60/KyloRenTLJEntertainmentWeekly.jpg/revision/latest?cb=20170919232026' alt='Kylo' height='300' width='225'></td>
+			<td>2</td>
+			<td>23</td>
+		</tr>
+		<tr id='chewie_row'>
+			<td><a href='http://starwars.wikia.com/wiki/Chewbacca'>Chewie</a></td>
+			<td><img src='https://vignette.wikia.nocookie.net/starwars/images/4/4f/Chewbacca-TFA.png/revision/latest?cb=20160106141736' alt='Chewie' height='300' width='225'></td>
+			<td>2</td>
+			<td>7</td>
+		</tr>
+		<tr id='bb-9e_row'>
+			<td><a href='http://starwars.wikia.com/wiki/BB-9E'>BB-9E</a></td>
+			<td><img src='https://vignette.wikia.nocookie.net/starwars/images/0/05/BB-9E_Fathead.png/revision/latest?cb=20170902001319' alt='BB-9E' height='300' width='225'></td>
+			<td>2</td>
+			<td>5</td>
+		</tr>
+		<tr id='rey_row'>
+			<td><a href='http://starwars.wikia.com/wiki/Rey'>Rey</a></td>
+			<td><img src='https://vignette.wikia.nocookie.net/starwars/images/f/f8/ReyTLJEntertainmentWeeklyNovember.png/revision/latest?cb=20171119211748' alt='Rey' height='300' width='225'></td>
+			<td>1</td>
+			<td>28</td>
+		</tr>
+		<tr id='rose_row'>
+			<td><a href='http://starwars.wikia.com/wiki/Rose_Tico'>Rose</a></td>
+			<td><img src='https://vignette.wikia.nocookie.net/starwars/images/c/c6/Rose_Tico_EW.png/revision/latest?cb=20171105220620' alt='Rose' height='300' width='225'></td>
+			<td>1</td>
+			<td>21</td>
+		</tr>
+		<tr id='leia_row'>
+			<td><a href='http://starwars.wikia.com/wiki/Leia_Organa'>Leia</a></td>
+			<td><img src='https://vignette.wikia.nocookie.net/starwars/images/a/ab/General_Leia_Organa_SWCT.png/revision/latest?cb=20170718232129' alt='Leia' height='300' width='225'></td>
+			<td>1</td>
+			<td>18</td>
+		</tr>
+		<tr id='holdo_row'>
+			<td><a href='http://starwars.wikia.com/wiki/Amilyn_Holdo'>Holdo</a></td>
+			<td><img src='https://vignette.wikia.nocookie.net/starwars/images/a/a4/Holdo-Elle.png/revision/latest?cb=20171205174318' alt='Holdo' height='300' width='225'></td>
+			<td>1</td>
+			<td>14</td>
+		</tr>
+		<tr id='snoke_row'>
+			<td><a href='http://starwars.wikia.com/wiki/Snoke'>Snoke</a></td>
+			<td><img src='https://vignette.wikia.nocookie.net/starwars/images/9/9d/SnokeTLJ.png/revision/latest?cb=20170910213521' alt='Snoke' height='300' width='225'></td>
+			<td>1</td>
+			<td>12</td>
+		</tr>
+		<tr id='vulptices_row'>
+			<td><a href='http://starwars.wikia.com/wiki/Vulptex'>vulptices</a></td>
+			<td><img src='https://vignette.wikia.nocookie.net/starwars/images/f/fb/Vulptex_2.png/revision/latest?cb=20171121062844' alt='vulptices' height='300' width='225'></td>
+			<td>1</td>
+			<td>2</td>
+		</tr>
+		<tr id='finn_row'>
+			<td><a href='http://starwars.wikia.com/wiki/Finn'>Finn</a></td>
+			<td><img src='https://vignette.wikia.nocookie.net/starwars/images/2/2e/Finn_EW.png/revision/latest?cb=20171114012257' alt='Finn' height='300' width='225'></td>
+			<td>0</td>
+			<td>24</td>
+		</tr>
+		<tr id='poe_row'>
+			<td><a href='http://starwars.wikia.com/wiki/Poe_Dameron'>Poe</a></td>
+			<td><img src='https://vignette.wikia.nocookie.net/starwars/images/7/74/PoeDameronTLJEW.png/revision/latest?cb=20171107005134' alt='Poe' height='300' width='225'></td>
+			<td>0</td>
+			<td>21</td>
+		</tr>
+		<tr id='han_row'>
+			<td><a href='http://starwars.wikia.com/wiki/Han_Solo'>Han</a></td>
+			<td><img src='https://vignette.wikia.nocookie.net/starwars/images/e/e2/TFAHanSolo.png/revision/latest?cb=20160208055002' alt='Han' height='300' width='225'></td>
+			<td>0</td>
+			<td>8</td>
+		</tr>
+		<tr id='phasma_row'>
+			<td><a href='http://starwars.wikia.com/wiki/Phasma'>Phasma</a></td>
+			<td><img src='https://vignette.wikia.nocookie.net/starwars/images/e/e7/PhasmaHS-Fathead.png/revision/latest?cb=20161003052605' alt='Phasma' height='300' width='225'></td>
+			<td>0</td>
+			<td>7</td>
+		</tr>
+		<tr id='dj_row'>
+			<td><a href='http://starwars.wikia.com/wiki/DJ'>DJ</a></td>
+			<td><img src='https://vignette.wikia.nocookie.net/starwars/images/a/a4/Holdo-Elle.png/revision/latest?cb=20171205174318' alt='DJ' height='300' width='225'></td>
+			<td>0</td>
+			<td>3</td>
+		</tr>
+		<tr id='c-3po_row'>
+			<td><a href='http://starwars.wikia.com/wiki/C-3PO'>C-3PO</a></td>
+			<td><img src='https://vignette.wikia.nocookie.net/starwars/images/7/7e/ThreepioTFA-Fathead.png/revision/latest?cb=20161109035240' alt='C-3PO' height='300' width='225'></td>
+			<td>0</td>
+			<td>2</td>
+		</tr>
+		<tr id='hux_row'>
+			<td><a href='http://starwars.wikia.com/wiki/Armitage_Hux'>Hux</a></td>
+			<td><img src='https://vignette.wikia.nocookie.net/starwars/images/2/2c/HuxTLJPromo_%28no_background%29.png/revision/latest?cb=20171119220230' alt='Hux' height='300' width='225'></td>
+			<td>0</td>
+			<td>2</td>
+		</tr>
+		<tr id='maz_row'>
+			<td><a href='http://starwars.wikia.com/wiki/Maz_Kanata'>Maz</a></td>
+			<td><img src='https://vignette.wikia.nocookie.net/starwars/images/e/e6/Maz_Kanata_HS.png/revision/latest?cb=20171111230137' alt='Maz' height='300' width='225'></td>
+			<td>0</td>
+			<td>1</td>
+		</tr>
+		<tr id='r2-d2_row'>
+			<td><a href='http://starwars.wikia.com/wiki/R2-D2'>R2-D2</a></td>
+			<td><img src='https://vignette.wikia.nocookie.net/starwars/images/e/eb/ArtooTFA2-Fathead.png/revision/latest?cb=20161108040914' alt='R2-D2' height='300' width='225'></td>
+			<td>0</td>
+			<td>1</td>
+		</tr>
+		<tr id='ackbar_row'>
+			<td><a href='http://starwars.wikia.com/wiki/Gial_Ackbar'>Ackbar</a></td>
+			<td><img src='https://vignette.wikia.nocookie.net/starwars/images/2/29/Admiral_Ackbar_RH.png/revision/latest?cb=20170907053204' alt='Ackbar' height='300' width='225'></td>
+			<td>0</td>
+			<td>0</td>
+		</tr>
+		<tr id='kaydel_row'>
+			<td><a href='http://starwars.wikia.com/wiki/Kaydel_Ko_Connix'>Kaydel</a></td>
+			<td><img src='https://vignette.wikia.nocookie.net/starwars/images/5/52/BillieLourd1.jpg/revision/latest?cb=20171005194617' alt='Kaydel' height='300' width='225'></td>
+			<td>0</td>
+			<td>0</td>
+		</tr>
+		<tr id='nunb_row'>
+			<td><a href='http://starwars.wikia.com/wiki/Nien_Nunb'>Nunb</a></td>
+			<td><img src='https://vignette.wikia.nocookie.net/starwars/images/1/14/Old_nien_nunb_-_profile.png/revision/latest?cb=20160813010804' alt='Nunb' height='300' width='225'></td>
+			<td>0</td>
+			<td>0</td>
+		</tr>
+		<tr id='plutt_row'>
+			<td><a href='http://starwars.wikia.com/wiki/Unkar_Plutt'>Plutt</a></td>
+			<td><img src='https://vignette.wikia.nocookie.net/starwars/images/b/b7/Unkar_Plutt-RO_U_Visual_Guide.png/revision/latest?cb=20170119072240' alt='Plutt' height='300' width='225'></td>
+			<td>0</td>
+			<td>0</td>
+		</tr>
+		<tr id='caretakers_row'>
+			<td><a href='http://starwars.wikia.com/wiki/Caretakers'>caretakers</a></td>
+			<td><img src='http://sm.ign.com/t/ign_za/screenshot/b/ba-hrefhtt/ba-hrefhttpewcommovies20170809star-wars-last-jedi-porgs-care_6esn.640.jpg' alt='caretakers' height='300' width='225'></td>
+			<td>0</td>
+			<td>0</td>
+		</tr>
+	</table>
+</body>
+</html>

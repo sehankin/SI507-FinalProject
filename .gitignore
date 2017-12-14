@@ -1,0 +1,8 @@
+__pycache__
+.DS_Store
+*.py[oc]
+venv_507_final_project
+507_final_project_cache.json
+config.py
+instructions.pdf
+old_code
